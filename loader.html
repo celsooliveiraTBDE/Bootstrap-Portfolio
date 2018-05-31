@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+    <!-- Add favicon  -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Celso Oliveira | Web Development</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <!-- Added CSS from Bootstrap -->
+    <!-- Load the Bootstrap before all other stylesheets to load our CSS -->
+    <link rel="stylesheet" type="text/css" media="screen" href="cover.css" />
+</head>
+
+
+
+<div id="loader-wrapper">
+    <div id="loader">
+        <div id="loader">
+            <div id="lemon"></div>
+            <div id="straw"></div>
+            <div id="glass">
+                <div id="cubes">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div id="drink"></div>
+                <span id="counter"></span>
+            </div>
+            <div id="coaster"></div>
+        </div>
+
+        <footer>Please wait while
+            <br>we fill up your glass...</footer>
+    </div>
+
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+
+</div>
+<div id="content">
+    <h2>This is our page title</h2>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+    crossorigin="anonymous"></script>
+<script>
+    var worker = null;
+    var loaded = 0;
+
+    function increment() {
+        $('#counter').html(loaded + '%');
+        $('#drink').css('top', (100 - loaded * .9) + '%');
+        if (loaded == 25) $('#cubes div:nth-child(1)').fadeIn(100);
+        if (loaded == 50) $('#cubes div:nth-child(2)').fadeIn(100);
+        if (loaded == 75) $('#cubes div:nth-child(3)').fadeIn(100);
+        if (loaded == 100) {
+            $('#lemon').fadeIn(100);
+            $('#straw').fadeIn(300);
+            $('#straw').fadeIn(300);
+            loaded = 0;
+            stopLoading();
+            setTimeout(startLoading, 3000);
+        }
+        else loaded++;
+    }
+
+    function startLoading() {
+        $('#lemon').hide();
+        $('#straw').hide();
+        $('#cubes div').hide();
+        worker = setInterval(increment, 20);
+    }
+    setTimeout(function(){
+     $('body').addClass('loaded');
+     $('h1').css('color','#222222');
+ }, 3000);
+
+ 
+    function stopLoading() {
+        clearInterval(worker);
+    }
+
+    $(document).ready(function() {
+    startLoading();
+    
+ 
+
+
+});
+</script>
