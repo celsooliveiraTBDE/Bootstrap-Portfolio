@@ -1,20 +1,20 @@
 #main { 
-    background: black url('../images/IMG_6403.JPG') center / cover;
+    background: white url('../images/IMG_6403.JPG') center / cover;
     /* The image used */
 }
-@media (max-width: 1024px) { #main { background: black url(assets/images/hero-2.jpg) center / cover; } }
+/* @media (max-width: 1024px) { #main { background: black url(assets/images/hero-2.jpg) center / cover; } }
 @media (max-width:  768px) { #main { background: black url(assets/images/hero-3.jpg) center / cover; } } 
-
+ */
 
 .video-banner{
-    background: black; 
+    background: white; 
 
 }
 
 .level-item{
-background: black
+background: white
 ; 
-border: 10px solid black; 
+border: 10px solid white; 
 }
 
 .grid{
@@ -142,6 +142,16 @@ article{
 
     }
 
-.title.is-1.s-spaced.has-text-centered{
+h1.title.is-1.s-spaced.has-text-centered{
     color:white;
+}
+h3{
+    font-size: 2rem;
+}
+.heading{
+    font-size: 16px
+}
+a.navbar-item {
+    padding-left: 20px;
+    padding-right:20px;
 }
