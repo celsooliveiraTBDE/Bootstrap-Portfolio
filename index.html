@@ -21,10 +21,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
 
-    <link rel="shortcut icon" type="image/jpg" href="assets/images/tbdelogo.jpg" />
+    <link rel="shortcut icon" type="image/png" href="assets/images/github.png" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/cover.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/cover_style.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/rain.css" />
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="assets/css/rain.css" /> -->
 
     <body>
         <!-- <section class="rain"> -->
@@ -58,8 +58,8 @@
                 <div class="columns is-mobile is-marginless heading has-text-weight-bold ">
                     <div class="column left">
                         <figure class="navbar-item image">
-                            <a href="http://www.instagram.com/thebestdrinkever">
-                                <img src="images/favicon.png" style="width: 2.15rem; height: 5rem;">
+                            <a href="https://github.com/celsooliveiraTBDE">
+                                <img src="assets/images/github.png" style="background-color:white; width: 2.35rem; height: 5.5rem;">
                             </a>
                         </figure>
                     </div>
@@ -72,7 +72,8 @@
                     </div>
                     <div class="column right">
 
-                        <p class="navbar-item desktop has-text-white desktop">ABOUT </p>
+                        <a class="navbar-item desktop has-text-white desktop"target="_blank" href="file:assets/docs/resumeCelsoOliveira.pdf">RESUME </a>
+
                         <p class="navbar-item desktop has-text-white desktop">CONTACT</p>
                         <a role="button" class="navbar-burger nav-toggle" id="nav-toggle" aria-label="menu" aria-expanded="false">
                             <span aria-hidden="true"></span>
@@ -127,7 +128,7 @@
                         <p class="subtitle is-7 has-text-white"> Email </p>
                     </div>
                     <div id="e" class="center-column">
-                        <a class="button is-danger is-inverted is-rounded is-outlined has-text-weight-bold" style="width: 100%; border: 0.15em solid white;"
+                        <a class="button is-danger is-inverted is-rounded is-outlined has-text-weight-bold" style="background-color: white width: 100%; border: 0.15em solid white;"
                             id='my-button'>
                             VIEW MY WORK
                         </a>
@@ -163,47 +164,47 @@
 
 
     <script>
-        $(document).ready(function () {
+    //     $(document).ready(function () {
 
-            // RAIN ********************************************************
-            // number of drops created.
-            var nbDrop = 858;
+    //         // RAIN ********************************************************
+    //         // number of drops created.
+    //         var nbDrop = 858;
 
-            // function to generate a random number range.
-            function randRange(minNum, maxNum) {
-                return (Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum);
-            }
+    //         // function to generate a random number range.
+    //         function randRange(minNum, maxNum) {
+    //             return (Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum);
+    //         }
 
-            // function to generate drops
-            function createRain() {
+    //         // function to generate drops
+    //         function createRain() {
 
-                for (i = 1; i < nbDrop; i++) {
-                    var dropLeft = randRange(0, 1600);
-                    var dropTop = randRange(-1000, 1400);
+    //             for (i = 1; i < nbDrop; i++) {
+    //                 var dropLeft = randRange(0, 1600);
+    //                 var dropTop = randRange(-1000, 1400);
 
-                    $('.rain').append('<div class="drop" id="drop' + i + '"></div>');
-                    $('#drop' + i).css('left', dropLeft);
-                    $('#drop' + i).css('top', dropTop);
-                }
+    //                 $('.rain').append('<div class="drop" id="drop' + i + '"></div>');
+    //                 $('#drop' + i).css('left', dropLeft);
+    //                 $('#drop' + i).css('top', dropTop);
+    //             }
 
-            }
-            // Make it rain
-            createRain();
-        });
-    </script>
-    <script>
-        jQuery(document).ready(function ($) {
+    //         }
+    //         // Make it rain
+    //         createRain();
+    //     });
+    // </script>
+    // <script>
+    //     jQuery(document).ready(function ($) {
 
 
-            $("#my-button").click(function () {
-                // $('.hero-foot').toggleClass('transform-active');
-                $('.modal').addClass('is-active');
-            });
-            $("#cancel").click(function () {
-                // $('.hero-foot').toggleClass('transform-active');
-                $('.modal').removeClass('is-active');
-            });
-        });
+    //         $("#my-button").click(function () {
+    //             // $('.hero-foot').toggleClass('transform-active');
+    //             $('.modal').addClass('is-active');
+    //         });
+    //         $("#cancel").click(function () {
+    //             // $('.hero-foot').toggleClass('transform-active');
+    //             $('.modal').removeClass('is-active');
+    //         });
+    //     });
 
 
 
